@@ -1,0 +1,18 @@
+name: Native
+fullname: LSD native controls
+filename: native.js
+description: Wrappers around in-browser form controls
+license: Public domain, http://unlicense.org
+copyright: Yaroslaff Fedin
+author: inviz
+sources:
+  - Source/A.js
+  - Source/Button.js
+  - Source/Form.js
+  - Source/Input.js
+  - Source/Input/Date.js
+  - Source/Input/File.js
+  - Source/Input/Submit.js
+  - Source/Input/Text.js
+  - Source/Select.js
+  - Source/Textarea.js
