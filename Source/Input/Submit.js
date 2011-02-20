@@ -11,6 +11,7 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD.Native.Input
+  - LSD.Native.Button
 
 provides: 
   - LSD.Native.Input.Submit
