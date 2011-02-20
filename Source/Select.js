@@ -10,14 +10,19 @@ license: Public domain (http://unlicense.org).
 authors: Yaroslaff Fedin
  
 requires:
-  - LSD/LSD.Native
+  - LSD.Native.Input
 
 provides: 
-  - LSD.Widget.Select
+  - LSD.Native.Select
  
 ...
 */
 
 LSD.Native.Select = new Class({
-  Extends: LSD.Native
+  Extends: LSD.Native.Input,
+  
+  options: {
+    tag: 'select'
+  }
+  
 })

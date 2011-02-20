@@ -18,17 +18,27 @@ provides:
  
 ...
 */
-
 LSD.Native.Button = new Class({
 
   Extends: LSD.Native,
 
   options: {
-    tag: 'button'
+    tag: 'button',
+    element: {
+      tag: 'div'
+    },
+    events: {
+      _button: {
+        element: {
+          click: 'click'
+        }
+      }
+    }
   },
   
   initialize: function() {
     this.parent.apply(this, arguments);
     this.addPseudo('touchable');
+    this.addPseudo('form-associated');
   }
 });

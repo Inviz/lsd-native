@@ -1,9 +1,9 @@
 /*
 ---
  
-script: Text.js
+script: Search.js
  
-description: Simple text input
+description: Search input
  
 license: Public domain (http://unlicense.org).
 
@@ -13,11 +13,11 @@ requires:
   - LSD.Native.Input
 
 provides: 
-  - LSD.Native.Input.Text
+  - LSD.Native.Input.Search
  
 ...
 */
 
-LSD.Native.Input.Text = new Class({
+LSD.Native.Input.Search = new Class({
   Extends: LSD.Native.Input
 })

@@ -1,7 +1,7 @@
 /*
 ---
  
-script: Text.js
+script: Radio.js
  
 description: Simple text input
  
@@ -13,11 +13,11 @@ requires:
   - LSD.Native.Input
 
 provides: 
-  - LSD.Native.Input.Text
+  - LSD.Native.Input.Radio
  
 ...
 */
 
-LSD.Native.Input.Text = new Class({
+LSD.Native.Input.Radio = new Class({
   Extends: LSD.Native.Input
 })

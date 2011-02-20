@@ -1,7 +1,7 @@
 /*
 ---
  
-script: Text.js
+script: Password.js
  
 description: Simple text input
  
@@ -13,11 +13,11 @@ requires:
   - LSD.Native.Input
 
 provides: 
-  - LSD.Native.Input.Text
+  - LSD.Native.Input.Password
  
 ...
 */
 
-LSD.Native.Input.Text = new Class({
+LSD.Native.Input.Password = new Class({
   Extends: LSD.Native.Input
 })

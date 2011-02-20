@@ -19,5 +19,5 @@ provides:
 */
 
 LSD.Native.Input.Date = new Class({
-  Extends: LSD.Native
+  Extends: LSD.Native.Input
 })

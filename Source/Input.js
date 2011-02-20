@@ -10,7 +10,9 @@ license: Public domain (http://unlicense.org).
 authors: Yaroslaff Fedin
  
 requires:
-  - LSD/LSD.Native
+ - LSD/LSD.Native
+ - LSD/LSD.Trait.Field
+ - LSD/LSD.Trait.Value
 
 provides: 
   - LSD.Native.Input
@@ -19,5 +21,28 @@ provides:
 */
 
 LSD.Native.Input = new Class({
-  Extends: LSD.Native
+  Includes: [
+    LSD.Native,
+    LSD.Trait.Field,
+    LSD.Trait.Value
+  ],
+  
+  options: {
+    tag: 'input',
+    events: {
+      element: {
+        change: 'setValue'
+      }
+    }
+  },
+  
+  applyValue: function(value) {
+    this.element.set('value', value);
+  },
+  
+  processValue: function(item) {
+    return (item && item.event) ? this.element.get('value') : item;
+  }
+  
+  
 })

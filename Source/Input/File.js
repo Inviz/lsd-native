@@ -3,7 +3,7 @@
  
 script: File.js
  
-description: Date picker input
+description: Simple text input
  
 license: Public domain (http://unlicense.org).
 
@@ -14,10 +14,10 @@ requires:
 
 provides: 
   - LSD.Native.Input.File
-
+ 
 ...
 */
 
 LSD.Native.Input.File = new Class({
-  Extends: LSD.Native
+  Extends: LSD.Native.Input
 })

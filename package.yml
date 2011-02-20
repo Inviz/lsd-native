@@ -6,13 +6,21 @@ license: Public domain, http://unlicense.org
 copyright: Yaroslaff Fedin
 author: inviz
 sources:
-  - Source/A.js
   - Source/Button.js
   - Source/Form.js
+  - Source/Fieldset.js
   - Source/Input.js
   - Source/Input/Date.js
   - Source/Input/File.js
   - Source/Input/Submit.js
   - Source/Input/Text.js
+  - Source/Input/Hidden.js
+  - Source/Input/Hidden.js
+  - Source/Input/Password.js
+  - Source/Input/Checkbox.js
+  - Source/Input/Radio.js
+  - Source/Input/Search.js
   - Source/Select.js
   - Source/Textarea.js
+  - Source/Body.js
+  - Source/Command.js
