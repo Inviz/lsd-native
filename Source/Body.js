@@ -21,5 +21,7 @@ provides:
 */
 
 LSD.Native.Body = new Class({
-  Includes: [LSD.Document.Resizable, LSD.Module.Expectations]
+  Includes: [LSD.Document.Resizable, LSD.Module.Expectations],
+  
+  getSelector: false
 });

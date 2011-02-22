@@ -41,7 +41,7 @@ LSD.Native.Form = new Class({
       },
       request: {
         badRequest: function() {
-          console.log('badReuest', Array.from(arguments))
+          console.log('badReuest', Array.concat(arguments))
         }
       }
     }

@@ -25,7 +25,7 @@ LSD.Native.Button = new Class({
   options: {
     tag: 'button',
     element: {
-      tag: 'div'
+      tag: 'a'
     },
     events: {
       _button: {

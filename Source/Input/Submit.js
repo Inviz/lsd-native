@@ -30,9 +30,16 @@ LSD.Native.Input.Submit = new Class({
           click: 'submit',
           build: function() {
             var tag = this.element.get('tag');
-            console.log('lolol build', tag)
             if (!tag || tag == 'input' || tag == 'button') return;
             this.shim = new Element('input[type=submit]', {
+              styles: {
+                width: 1,
+                height: 0,
+                display: 'block',
+                border: 0,
+                padding: 0,
+                overflow: 'hidden'
+              },
               events: {
                 click: function() {
                   this.click();
@@ -49,7 +56,6 @@ LSD.Native.Input.Submit = new Class({
   
   initialize: function() {
     this.parent.apply(this, arguments);
-    console.log('submittie')
     if (this.attributes.name) this.addPseudo('form-associated');
   },
   
