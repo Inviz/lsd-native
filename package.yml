@@ -25,3 +25,5 @@ sources:
   - Source/Body.js
   - Source/Command.js
   - Source/Label.js
+  - Source/Table.js
+  - Source/Table/Calendar.js

@@ -11,7 +11,9 @@ authors: Yaroslaff Fedin
  
 requires:  
   - LSD/LSD.Native
+  - LSD/LSD.Document
   - LSD/LSD.Document.Resizable
+  - LSD/LSD.Document.Commands
   - LSD/LSD.Module.Expectations
 
 provides:
@@ -21,7 +23,12 @@ provides:
 */
 
 LSD.Native.Body = new Class({
-  Includes: [LSD.Document.Resizable, LSD.Module.Expectations],
+  Includes: [
+    LSD.Document, 
+    LSD.Document.Resizable, 
+    LSD.Document.Commands, 
+    LSD.Module.Expectations
+  ],
   
   getSelector: false
 });

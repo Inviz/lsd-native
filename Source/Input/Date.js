@@ -1,7 +1,7 @@
 /*
 ---
  
-script: Text.js
+script: Date.js
  
 description: Date picker input
  
@@ -11,6 +11,7 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD.Native.Input
+  - LSD.Trait.Date
 
 provides: 
   - LSD.Native.Input.Date
@@ -19,5 +20,14 @@ provides:
 */
 
 LSD.Native.Input.Date = new Class({
-  Extends: LSD.Native.Input
+  Includes: [
+    LSD.Native.Input,
+    LSD.Trait.Date
+  ],
+  
+  options: {
+    attributes: {
+      type: 'date'
+    }
+  }
 })
