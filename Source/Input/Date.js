@@ -11,7 +11,7 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD.Native.Input
-  - LSD.Trait.Date
+  - LSD/LSD.Trait.Date
 
 provides: 
   - LSD.Native.Input.Date

@@ -48,6 +48,6 @@ LSD.Native.Form = new Class({
   },
   
   onRequestSuccess: function() {
-    console.log('lol form ok')
+    this.parent.apply(this, arguments);
   }
 })
