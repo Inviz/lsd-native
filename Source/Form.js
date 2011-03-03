@@ -45,9 +45,5 @@ LSD.Native.Form = new Class({
         }
       }
     }
-  },
-  
-  onRequestSuccess: function() {
-    this.parent.apply(this, arguments);
   }
 })

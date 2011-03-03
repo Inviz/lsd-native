@@ -33,7 +33,6 @@ LSD.Native.Table = new Class({
             this.head = el.tHead;
             this.tbody = el.tBody;
             this.tfoot = el.tFoot;
-            console.log(el)
             this.setTable(this.options);
           }
         }
@@ -52,6 +51,7 @@ LSD.Native.Table = new Class({
   
   setData: function(data) {
     if (!this.tbody) this.tbody = new Element('tbody').inject(this.element);
+    else this.tbody.empty()
     for (var i = 0, row; row = data[i++];) this.tbody.appendChild(this.setRow(row));
   },
   
@@ -83,6 +83,7 @@ LSD.Native.Table = new Class({
   
   setHeader: function(header) {
     if (!this.thead) this.thead = new Element('thead').inject(this.element);
+    else this.thead.empty()
     header.each(function(name) {
       this.thead.appendChild(this.setHeaderCell(name))
     }, this);
@@ -91,6 +92,7 @@ LSD.Native.Table = new Class({
   
   setFooter: function(footer) {
     if (!this.tfoot) this.tfoot = new Element('tfoot').inject(this.element);
+    else this.tfoot.empty()
     footer.each(function(name) {
       this.tfoot.appendChild(this.setHeaderCell(name))
     }, this);
