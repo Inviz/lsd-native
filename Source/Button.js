@@ -40,5 +40,11 @@ LSD.Native.Button = new Class({
     this.parent.apply(this, arguments);
     this.addPseudo('touchable');
     this.addPseudo('form-associated');
+  },
+  
+  click: function(event) {
+    event.preventDefault();
+    return this.parent.apply(this, arguments);
+    
   }
 });

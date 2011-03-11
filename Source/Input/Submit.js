@@ -51,19 +51,18 @@ LSD.Native.Input.Submit = new Class({
           }
         }
       }
+    },
+    chain: {
+      submission: function() {
+        var target = this.form || Slick.find(this, '! :submittable');
+        if (target) return ['send', target];
+      }
     }
   },
   
   initialize: function() {
     this.parent.apply(this, arguments);
     if (this.attributes.name) this.addPseudo('form-associated');
-  },
-  
-  submit: function(e) {
-    if (this.form) {
-      this.form.submit();
-      if (e) e.preventDefault();
-    }
   }
 
 });

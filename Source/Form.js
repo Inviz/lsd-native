@@ -15,7 +15,7 @@ requires:
   - LSD/LSD.Trait.Fieldset
 
 provides: 
-  - LSD.Widget.Form
+  - LSD.Native.Form
  
 ...
 */
