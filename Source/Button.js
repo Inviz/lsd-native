@@ -43,8 +43,7 @@ LSD.Native.Button = new Class({
   },
   
   click: function(event) {
-    event.preventDefault();
+    if (event) event.preventDefault();
     return this.parent.apply(this, arguments);
-    
   }
 });

@@ -54,7 +54,7 @@ LSD.Native.Input.Submit = new Class({
     },
     chain: {
       submission: function() {
-        var target = this.form || Slick.find(this, '! :submittable');
+        var target = this.form || Slick.find(this, '! :submittable') || (this.document && this.document.submit && this.document);
         if (target) return ['send', target];
       }
     }
