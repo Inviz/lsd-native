@@ -11,6 +11,8 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD/LSD.Native
+  - LSD/LSD.Trait.Grid,
+  - LSD/LSD.Trait.List
 
 provides: 
   - LSD.Native.Table
@@ -19,7 +21,11 @@ provides:
 */
 
 LSD.Native.Table = new Class({
-  Extends: LSD.Native,
+  Includes: [
+    LSD.Native,
+    LSD.Trait.Grid,
+    LSD.Trait.List
+  ],
   
   options: {
     header: null,
