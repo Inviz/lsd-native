@@ -32,6 +32,6 @@ LSD.Native.Command = new Class({
   ]
 });
 
-(function(Command) {
+!function(Command) {
   Command.Command = Command.Checkbox = Command.Radio = Command;
-})(LSD.Native.Command);
+}(LSD.Native.Command);
