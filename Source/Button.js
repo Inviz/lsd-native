@@ -43,7 +43,7 @@ LSD.Native.Button = new Class({
   },
   
   click: function(event) {
-    if (event && !(this.element.get('tag') == 'a' && this.getRequestMethod() == 'get' && !this.isRequestURLLocal()) && this.getNextAction() == 'send') event.preventDefault();
+    if (event && !(this.element.get('tag') == 'a' && this.getRequestMethod() == 'get' && !this.isRequestURLLocal() && this.getNextAction() == 'send')) event.preventDefault();
     return this.parent.apply(this, arguments);
   }
 });
