@@ -30,8 +30,13 @@ LSD.Native.Input = new Class({
   options: {
     tag: 'input',
     events: {
-      element: {
-        change: 'setValue'
+      _input: {
+        element: {
+          change: 'setValue'
+        },
+        self: {
+          build: 'setValue'
+        }
       }
     }
   },
@@ -41,7 +46,7 @@ LSD.Native.Input = new Class({
   },
   
   processValue: function(item) {
-    return (item && item.event) ? this.element.get('value') : item;
+    return (item && item.event || item == null) ? this.element.get('value') : item;
   }
   
   
