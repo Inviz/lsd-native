@@ -11,7 +11,7 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD/LSD.Native
-  - LSD/LSD.Trait.Grid,
+  - LSD/LSD.Trait.Grid
   - LSD/LSD.Trait.List
 
 provides: 
