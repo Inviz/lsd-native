@@ -33,13 +33,8 @@ LSD.Native.Button = new Class({
           click: 'click'
         }
       }
-    }
-  },
-  
-  initialize: function() {
-    this.parent.apply(this, arguments);
-    this.addPseudo('touchable');
-    this.addPseudo('form-associated');
+    },
+    pseudos: FastArray.compact('touchable', 'form-associated')
   },
   
   click: function(event) {
