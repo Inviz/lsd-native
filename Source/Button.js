@@ -29,8 +29,10 @@ LSD.Native.Button = new Class({
     },
     events: {
       _button: {
-        element: {
-          click: 'click'
+        enabled: {
+          element: {
+            click: 'click'
+          }
         }
       }
     },
