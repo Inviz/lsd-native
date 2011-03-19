@@ -28,25 +28,15 @@ LSD.Native.Input = new Class({
   ],
   
   options: {
-    tag: 'input',
-    events: {
-      _input: {
-        element: {
-          change: 'setValue'
-        },
-        self: {
-          build: 'setValue'
-        }
-      }
-    }
+    tag: 'input'
   },
   
   applyValue: function(value) {
     this.element.set('value', value);
   },
   
-  processValue: function(item) {
-    return (item && item.event || item == null) ? this.element.get('value') : item;
+  getRawValue: function() {
+    return this.element.get('value');
   }
   
   
