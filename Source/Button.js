@@ -36,12 +36,12 @@ LSD.Native.Button = new Class({
         }
       }
     },
-    pseudos: FastArray.compact('touchable', 'form-associated')
+    pseudos: Array.fast('touchable')
   },
   
   click: function(event) {
     var kicked = this.parent.apply(this, arguments);
-    if (event && !(this.element.get('tag') == 'a' && this.getRequestMethod() == 'get' && !this.isRequestURLLocal() && kicked.indexOf('send') > -1)) event.preventDefault();
+    if (event/* && !(kicked.indexOf('send') > -1 && !this.getRequestData() && this.element.get('tag') == 'a' && this.getRequestMethod() == 'get' && !this.isRequestURLLocal())*/) event.preventDefault();
     return kicked;
   }
 });
