@@ -29,10 +29,8 @@ LSD.Native.Button = new Class({
     },
     events: {
       _button: {
-        enabled: {
-          element: {
-            click: 'click'
-          }
+        element: {
+          click: 'click'
         }
       }
     },
@@ -40,8 +38,7 @@ LSD.Native.Button = new Class({
   },
   
   click: function(event) {
-    var kicked = this.parent.apply(this, arguments);
-    if (event/* && !(kicked.indexOf('send') > -1 && !this.getRequestData() && this.element.get('tag') == 'a' && this.getRequestMethod() == 'get' && !this.isRequestURLLocal())*/) event.preventDefault();
-    return kicked;
+    if (event && event.preventDefault) event.preventDefault();
+    if (!this.disabled) return this.parent.apply(this, arguments);
   }
 });
