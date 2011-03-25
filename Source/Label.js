@@ -33,7 +33,7 @@ LSD.Native.Label = new Class({
         }
       },
       control: {
-        valid: 'alidate',
+        valid: 'validate',
         invalid: 'invalidate'
       }
     }
