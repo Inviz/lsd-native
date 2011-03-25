@@ -33,7 +33,8 @@ LSD.Native.Label = new Class({
         }
       },
       control: {
-        
+        valid: 'alidate',
+        invalid: 'invalidate'
       }
     }
   },
@@ -41,11 +42,23 @@ LSD.Native.Label = new Class({
   setControl: function(widget) {
     this.control = widget;
     if (!widget.labels) widget.labels = [];
-    widget.labels.push(this)
+    widget.labels.push(this);
+    widget.addEvents(this.bindEvents(this.events.control));
   },
   
   unsetControl: function(widget) {
     delete this.control;
     widget.labels.erase(this);
+    widget.removeEvents(this.bindEvents(this.events.control));
+  },
+  
+  validate: function() {
+    this.setState('valid');
+    this.unsetState('invalid');
+  },
+  
+  invalidate: function() {
+    this.setState('invalid');
+    this.unsetState('valid');
   }
 })

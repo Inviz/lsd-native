@@ -38,11 +38,6 @@ LSD.Native.Form = new Class({
     events: {
       element: {
         submit: 'submit'
-      },
-      request: {
-        badRequest: function() {
-          console.log('badRequest', Array.concat(arguments))
-        }
       }
     }
   }

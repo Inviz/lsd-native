@@ -38,7 +38,8 @@ LSD.Native.Input.Submit = new Class({
                 display: 'block',
                 border: 0,
                 padding: 0,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                position: 'absolute'
               },
               events: {
                 click: function() {
