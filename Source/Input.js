@@ -28,7 +28,14 @@ LSD.Native.Input = new Class({
   ],
   
   options: {
-    tag: 'input'
+    tag: 'input',
+    events: {
+      _input: {
+        element: {
+          change: 'setValue'
+        }
+      }
+    }
   },
   
   applyValue: function(value) {

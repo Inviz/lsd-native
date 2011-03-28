@@ -28,7 +28,7 @@ LSD.Native.Input.Submit = new Class({
       _submission: {
         self: {
           click: 'submit',
-          build: function() {
+          dominject: function() {
             var tag = this.element.get('tag');
             if (!tag || tag == 'input' || tag == 'button') return;
             this.shim = new Element('input[type=submit]', {
