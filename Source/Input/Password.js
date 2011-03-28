@@ -20,4 +20,4 @@ provides:
 
 LSD.Native.Input.Password = new Class({
   Extends: LSD.Native.Input
-})
+});

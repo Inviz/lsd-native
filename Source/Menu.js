@@ -24,4 +24,4 @@ LSD.Native.Menu = new Class({
   options: {
     tag: 'menu'
   }
-})
+});

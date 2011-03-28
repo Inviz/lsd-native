@@ -20,4 +20,4 @@ provides:
 
 LSD.Native.Input.Radio = new Class({
   Extends: LSD.Native.Input
-})
+});

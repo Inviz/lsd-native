@@ -30,4 +30,4 @@ LSD.Native.Input.Date = new Class({
       type: 'date'
     }
   }
-})
+});

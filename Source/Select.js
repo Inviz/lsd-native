@@ -25,4 +25,4 @@ LSD.Native.Select = new Class({
     tag: 'select'
   }
   
-})
+});

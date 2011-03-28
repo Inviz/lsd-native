@@ -27,4 +27,4 @@ LSD.Native.Textarea = new Class({
     },
     tag: 'textarea'
   }
-})
+});

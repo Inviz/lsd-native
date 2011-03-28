@@ -102,4 +102,4 @@ LSD.Native.Table = new Class({
     }, this);
     return this.tfoot;
   }
-})
+});

@@ -20,4 +20,4 @@ provides:
 
 LSD.Native.Input.Hidden = new Class({
   Extends: LSD.Native.Input
-})
+});

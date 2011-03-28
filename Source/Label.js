@@ -61,4 +61,4 @@ LSD.Native.Label = new Class({
     this.setState('invalid');
     this.unsetState('valid');
   }
-})
+});

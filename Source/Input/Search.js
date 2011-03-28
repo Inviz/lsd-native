@@ -20,4 +20,4 @@ provides:
 
 LSD.Native.Input.Search = new Class({
   Extends: LSD.Native.Input
-})
+});

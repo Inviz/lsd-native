@@ -20,4 +20,4 @@ provides:
 
 LSD.Native.Input.File = new Class({
   Extends: LSD.Native.Input
-})
+});

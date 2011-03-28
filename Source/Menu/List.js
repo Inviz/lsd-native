@@ -24,4 +24,4 @@ LSD.Native.Menu.List = new Class({
     LSD.Native.Menu,
     LSD.Trait.List
   ]
-})
+});

@@ -20,4 +20,4 @@ provides:
 
 LSD.Native.Input.Text = new Class({
   Extends: LSD.Native.Input
-})
+});

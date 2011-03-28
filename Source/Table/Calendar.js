@@ -120,4 +120,4 @@ LSD.Native.Table.Calendar = new Class({
     if (this.built) this.setTable(table);
     else Object.extend(this.options, table);
   }
-})
+});

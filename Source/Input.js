@@ -46,5 +46,4 @@ LSD.Native.Input = new Class({
     return this.element.get('value');
   }
   
-  
-})
+});

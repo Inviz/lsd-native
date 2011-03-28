@@ -28,4 +28,4 @@ LSD.Native.Fieldset = new Class({
   options: {
     tag: 'fieldset'
   }
-})
+});

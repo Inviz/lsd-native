@@ -41,4 +41,4 @@ LSD.Native.Form = new Class({
       }
     }
   }
-})
+});

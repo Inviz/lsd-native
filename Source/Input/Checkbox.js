@@ -50,4 +50,4 @@ LSD.Native.Input.Checkbox = new Class({
   processValue: function(value) {
     return this.checked ? value : null;
   }
-})
+});
