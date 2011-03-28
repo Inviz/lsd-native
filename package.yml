@@ -9,8 +9,6 @@ sources:
   - Source/Button.js
   - Source/Form.js
   - Source/Fieldset.js
-  - Source/Menu.js
-  - Source/Menu/List.js
   - Source/Input.js
   - Source/Input/Date.js
   - Source/Input/File.js
