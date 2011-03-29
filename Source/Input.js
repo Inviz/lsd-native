@@ -35,7 +35,8 @@ LSD.Native.Input = new Class({
           change: 'setValue'
         }
       }
-    }
+    },
+    focusable: false
   },
   
   applyValue: function(value) {
