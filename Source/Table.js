@@ -35,8 +35,9 @@ LSD.Native.Table = new Class({
           build: function() {
             var el = this.element;
             this.head = el.tHead;
-            this.tbody = el.tBody;
-            this.tfoot = el.tFoot;
+            this.body = (el.tBodies ? el.tBodies[0] : el.tBody);
+            this.foot = el.tFoot;
+            console.log(this.header)
             this.setTable(this.options);
           }
         }
@@ -54,9 +55,9 @@ LSD.Native.Table = new Class({
   },
   
   setData: function(data) {
-    if (!this.tbody) this.tbody = new Element('tbody').inject(this.element);
-    else this.tbody.empty()
-    for (var i = 0, row; row = data[i++];) this.tbody.appendChild(this.setRow(row));
+    if (!this.body) this.body = new Element('body').inject(this.element);
+    else this.body.empty()
+    for (var i = 0, row; row = data[i++];) this.body.appendChild(this.setRow(row));
   },
   
   setRow: function(values) {
@@ -86,20 +87,20 @@ LSD.Native.Table = new Class({
   },
   
   setHeader: function(header) {
-    if (!this.thead) this.thead = new Element('thead').inject(this.element);
-    else this.thead.empty()
+    if (!this.head) this.head = new Element('thead').inject(this.element);
+    else this.head.empty()
     header.each(function(name) {
-      this.thead.appendChild(this.setHeaderCell(name))
+      this.head.appendChild(this.setHeaderCell(name))
     }, this);
-    return this.thead;
+    return this.head;
   },
   
   setFooter: function(footer) {
-    if (!this.tfoot) this.tfoot = new Element('tfoot').inject(this.element);
-    else this.tfoot.empty()
+    if (!this.foot) this.foot = new Element('tfoot').inject(this.element);
+    else this.foot.empty()
     footer.each(function(name) {
-      this.tfoot.appendChild(this.setHeaderCell(name))
+      this.foot.appendChild(this.setHeaderCell(name))
     }, this);
-    return this.tfoot;
+    return this.foot;
   }
 });
