@@ -21,10 +21,6 @@ provides:
 LSD.Native.Input.Checkbox = new Class({
   Extends: LSD.Native.Input,
   
-  Stateful: {
-    checked: ['check', 'uncheck', 'toggle']
-  },
-  
   options: {
     events: {
       _checkbox: {
@@ -51,3 +47,5 @@ LSD.Native.Input.Checkbox = new Class({
     return this.checked ? value : null;
   }
 });
+
+LSD.Native.Input.Checkbox.prototype.addState('checked');
