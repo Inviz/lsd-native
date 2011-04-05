@@ -14,7 +14,6 @@ requires:
   - LSD/LSD.Document
   - LSD/LSD.Document.Resizable
   - LSD/LSD.Document.Commands
-  - LSD/LSD.Module.Expectations
 
 provides:
   - LSD.Native.Body
@@ -26,8 +25,7 @@ LSD.Native.Body = new Class({
   Includes: [
     LSD.Document, 
     LSD.Document.Resizable, 
-    LSD.Document.Commands, 
-    LSD.Module.Expectations
+    LSD.Document.Commands
   ],
   
   getSelector: false
