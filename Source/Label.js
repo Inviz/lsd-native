@@ -36,7 +36,8 @@ LSD.Native.Label = new Class({
         valid: 'validate',
         invalid: 'invalidate'
       }
-    }
+    },
+    pseudos: Array.fast('form-associated')
   },
   
   setControl: function(widget) {

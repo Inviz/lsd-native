@@ -11,7 +11,6 @@ authors: Yaroslaff Fedin
  
 requires:
  - LSD/LSD.Native
- - LSD/LSD.Trait.Field
  - LSD/LSD.Trait.Value
 
 provides: 
@@ -23,7 +22,6 @@ provides:
 LSD.Native.Input = new Class({
   Includes: [
     LSD.Native,
-    LSD.Trait.Field,
     LSD.Trait.Value
   ],
   
@@ -36,7 +34,8 @@ LSD.Native.Input = new Class({
         }
       }
     },
-    focusable: false
+    focusable: false,
+    writable: true
   },
   
   applyValue: function(value) {

@@ -61,6 +61,8 @@ LSD.Native.Table.Calendar = new Class({
     var cell = e.target;
     this.day = this.getDayFromCell(cell);
     this.setCell(this.selected);
+    this.setDate(this.current.clone().set('date', this.day));
+    this.fireEvent('set', this.date);
     this.selected = cell;
     this.setCell(this.selected);
   },
@@ -98,15 +100,17 @@ LSD.Native.Table.Calendar = new Class({
   
   setDate: function(date) {
     this.date = date = (date ? date.clone() : new Date);
+    var beginning = date.clone().set('date', 1);
+    if (this.currrent && !beginning.compare(this.currrent)) return; false;
+    this.current = beginning;
     this.day = this.date.getDate();
     var table = {
       caption: date.format(this.options.format.caption),
       data: [[]],
       header: Locale.get('Date.days_abbr')
     };
-    if (this.options.footer !== false) table.footer = table.header;
     var data = table.data;
-    var beginning = date.clone().set('date', 1);
+    if (this.options.footer !== false) table.footer = table.header;
     var day = beginning.get('day');
     var last = date.getLastDayOfMonth();
     for (var i = 0; i < day; i++) data[0].push(' ');
