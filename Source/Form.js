@@ -29,15 +29,17 @@ LSD.Native.Form = new Class({
   
   options: {
     tag: 'form',
-    element: {
-      // novalidate html attribute disables internal form validation 
-      // on form submission. Chrome and Safari will block form 
-      // submission without any visual clues otherwise.
-      novalidate: true 
-    },
     events: {
       element: {
         submit: 'submit'
+      },
+      self: {
+        build: function() {
+          // novalidate html attribute disables internal form validation 
+          // on form submission. Chrome and Safari will block form 
+          // submission without any visual clues otherwise.
+          if (this.element.get('tag') == 'form') this.element.setProperty('novalidate', true);
+        }
       }
     }
   }
