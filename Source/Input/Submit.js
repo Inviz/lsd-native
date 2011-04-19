@@ -42,9 +42,8 @@ LSD.Native.Input.Submit = new Class({
                 position: 'absolute'
               },
               events: {
-                click: function() {
-                  this.click();
-                  return false;
+                click: function(e) {
+                  e.preventDefault()
                 }.bind(this)
               }
             }).inject(this.element);

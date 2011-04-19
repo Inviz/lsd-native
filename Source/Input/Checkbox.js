@@ -22,6 +22,9 @@ LSD.Native.Input.Checkbox = new Class({
   Extends: LSD.Native.Input,
   
   options: {
+    command: {
+      type: 'checkbox'
+    },
     events: {
       _checkbox: {
         self: {
@@ -32,19 +35,13 @@ LSD.Native.Input.Checkbox = new Class({
           },
           'check': function() {
             this.element.checked = true;
-            this.setValue();
           },
           'uncheck': function() {
             this.element.checked = false;
-            this.setValue();
           }
         }
       }
     }
-  },
-  
-  processValue: function(value) {
-    return this.checked ? value : null;
   }
 });
 
