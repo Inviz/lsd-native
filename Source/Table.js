@@ -37,7 +37,6 @@ LSD.Native.Table = new Class({
             this.head = el.tHead;
             this.body = (el.tBodies ? el.tBodies[0] : el.tBody);
             this.foot = el.tFoot;
-            console.log(this.header)
             this.setTable(this.options);
           }
         }
