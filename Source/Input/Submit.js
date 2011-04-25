@@ -47,7 +47,7 @@ LSD.Native.Input.Submit = new Class({
                 }.bind(this)
               }
             }).inject(this.element);
-            this.addEvent('destroy', this.shim.destroy.bind(this.shim));
+            this.element.addEvent('destroy', this.shim.destroy.bind(this.shim));
           }
         }
       }
