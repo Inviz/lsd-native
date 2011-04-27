@@ -30,8 +30,10 @@ LSD.Native.Input.Radio = new Class({
         self: {
           'click': 'check',
           'build': function() {
-            if (this.element.checked) this.click();
             this.element.addListener('click', this.click.bind(this));
+          },
+          'dominject': function(){
+            if (this.attributes.checked) this.click();
           },
           'check': function() {
             this.element.checked = true;
