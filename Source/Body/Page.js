@@ -10,7 +10,7 @@ license: Public domain (http://unlicense.org).
 authors: Yaroslaff Fedin
  
 requires:  
-  - LSD/LSD.Native.Body
+  - LSD.Native.Body
 
 provides:
   - LSD.Native.Body.Page
@@ -25,6 +25,14 @@ LSD.Native.Body.Page = new Class({
     element: {
       tag: 'section'
     },
-    classes: ['page']
+    classes: ['page'],
+    nodeType: 1,
+    events: {
+      _page: {
+        'build': function() {
+          if (!this.element.parentNode) this.element.inject(document.body);
+        }
+      }
+    }
   }
 });
