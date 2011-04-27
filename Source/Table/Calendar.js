@@ -120,7 +120,7 @@ LSD.Native.Table.Calendar = new Class({
       if (!row) row = data[index] = [];
       row.push(i);
     }
-    for (var i = 0, j = data.length - 1, k = (7 - ((last + day) % 7)); i < k; i++) data[j].push(' ');
+    if (row.length < 7) for (var i = 0, j = data.length - 1, k = (7 - ((last + day) % 7)); i < k; i++) data[j].push(' ');
     if (this.built) this.setTable(table);
     else Object.extend(this.options, table);
   }
