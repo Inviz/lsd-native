@@ -11,7 +11,7 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD/LSD.Native
-  - LSD/LSD.Module.Acessories
+  - LSD/LSD.Module.Accessories
   - LSD/LSD.Module.Layout
   - LSD/LSD.Mixin.Dialog
 
@@ -23,7 +23,7 @@ provides:
 
 LSD.Native.Anchor = new Class({
   Includes: [
-    LSD.Module.Acessories,
+    LSD.Module.Accessories,
     LSD.Module.Behavior,
     LSD.Module.Layout,
     LSD.Mixin.Request,
