@@ -44,13 +44,13 @@ LSD.Native.Label = new Class({
     this.control = widget;
     if (!widget.labels) widget.labels = [];
     widget.labels.push(this);
-    widget.addEvents(this.bindEvents(this.events.control));
+    //widget.addEvents(this.bindEvents(this.events.control));
   },
   
   unsetControl: function(widget) {
     delete this.control;
     widget.labels.erase(this);
-    widget.removeEvents(this.bindEvents(this.events.control));
+    //widget.removeEvents(this.bindEvents(this.events.control));
   },
   
   validate: function() {

@@ -23,6 +23,7 @@ sources:
   - Source/Select.js
   - Source/Textarea.js
   - Source/Body.js
+  - Source/Anchor.js
   - Source/Body/Page.js
   - Source/Body/Dialog.js
   - Source/Command.js

@@ -10,10 +10,11 @@ license: Public domain (http://unlicense.org).
 authors: Yaroslaff Fedin
  
 requires:
-  - LSD/LSD.Node
   - LSD/LSD.Native
   - LSD/LSD.Module.Command
   - LSD/LSD.Module.DOM
+  - LSD/LSD.Module.Element
+  - LSD/LSD.Module.Options
   
 provides:
   - LSD.Native.Command
@@ -26,10 +27,13 @@ provides:
 
 LSD.Native.Command = new Class({
   Includes: [
-    LSD.Node,
     LSD.Module.DOM,
-    LSD.Module.Command
-  ]
+    LSD.Module.Command,
+    LSD.Module.Element, 
+    LSD.Module.Options
+  ],
+  
+  initialize: LSD.Module.Options.initialize
 });
 
 !function(Command) {

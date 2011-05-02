@@ -25,7 +25,7 @@ LSD.Native.Body.Page = new Class({
     element: {
       tag: 'section'
     },
-    classes: ['page'],
+    classes: Array.fast('page'),
     nodeType: 1,
     events: {
       _page: {

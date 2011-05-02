@@ -45,7 +45,7 @@ LSD.Native.Body.Dialog = new Class({
           selector: 'form',
           chain: {
             'submission': function() {
-              return {name: 'send', target: this.document}
+              return {action: 'send', target: this.document}
             }
           }
         }

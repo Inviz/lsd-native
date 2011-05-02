@@ -30,7 +30,7 @@ LSD.Native.Table.Calendar = new Class({
     events: {
       _calendar: {
         self: {
-          'build': function() {
+          'attach': function() {
             this.setDate(this.options.date);
           }
         },
