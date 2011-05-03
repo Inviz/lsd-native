@@ -22,9 +22,6 @@ LSD.Native.Textarea = new Class({
   Extends: LSD.Native.Input,
   
   options: {
-    element: {
-      tag: 'textarea'
-    },
     tag: 'textarea'
   }
 });
