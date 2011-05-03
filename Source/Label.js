@@ -23,43 +23,36 @@ LSD.Native.Label = new Class({
   
   options: {
     tag: 'label',
-    events: {
-      _label: {
-        dominject: function(element, doc) {
-          var id = this.attributes['for'];
-          if (id) doc.expect({id: id, combinator: ' ', tag: '*'}, function(widget, state) {
-            this[state ? 'setControl' : 'unsetControl'](widget);
-          }.bind(this))
+    has: {
+      one: {
+        control: {
+          expectation: function() {
+            var id = this.attributes['for'];
+            if (id) return {id: id, combinator: ' ', tag: '*'};
+          },
+          target: 'document',
+          collection: 'labels',
+          states: {
+            get: {
+              invalid: 'invalid'
+            }
+          }
         }
-      },
-      control: {
-        valid: 'validate',
-        invalid: 'invalidate'
       }
     },
-    pseudos: Array.fast('form-associated')
+    pseudos: Array.fast('form-associated'),
+    states: Array.fast('invalid'),
+    events: {
+      _label: {
+        element: {
+          'click': 'focusControl'
+        }
+      }
+    }
   },
   
-  setControl: function(widget) {
-    this.control = widget;
-    if (!widget.labels) widget.labels = [];
-    widget.labels.push(this);
-    //widget.addEvents(this.bindEvents(this.events.control));
-  },
-  
-  unsetControl: function(widget) {
-    delete this.control;
-    widget.labels.erase(this);
-    //widget.removeEvents(this.bindEvents(this.events.control));
-  },
-  
-  validate: function() {
-    this.setState('valid');
-    this.unsetState('invalid');
-  },
-  
-  invalidate: function() {
-    this.setState('invalid');
-    this.unsetState('valid');
+  focusControl: function(event) {
+    if (this.control && this.control.focus) this.control.focus()
+    if (event) event.preventDefault()
   }
 });
