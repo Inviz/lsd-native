@@ -26,10 +26,7 @@ LSD.Native.Input = new Class({
     events: {
       _input: {
         element: {
-          change: 'setValue',
-          click: function() {
-            this.blur();
-          }
+          change: 'setValue'
         }
       }
     },

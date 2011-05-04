@@ -27,6 +27,12 @@ LSD.Native.Input.Checkbox = new Class({
     },
     events: {
       _checkbox: {
+        element: {
+          click: function() { //do it for ie so onchange is fired
+            this.blur();
+            this.focus()
+          }
+        },
         self: {
           'attach': function() {
             if (this.element.checked) this.click();
