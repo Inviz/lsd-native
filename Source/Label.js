@@ -52,7 +52,9 @@ LSD.Native.Label = new Class({
   },
   
   focusControl: function(event) {
-    if (this.control && this.control.focus) this.control.focus()
-    if (event) event.preventDefault()
+    if (this.control && this.control.focus) {
+      this.control.focus();
+      if (event) event.preventDefault();
+    }
   }
 });
