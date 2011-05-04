@@ -28,16 +28,17 @@ LSD.Native.Input.Checkbox = new Class({
     events: {
       _checkbox: {
         self: {
-          'click': 'toggle',
           'attach': function() {
             if (this.element.checked) this.click();
             this.element.addListener('click', this.click.bind(this));
           },
           'check': function() {
             this.element.checked = true;
+            this.getCommand().check();
           },
           'uncheck': function() {
             this.element.checked = false;
+            this.getCommand().uncheck();
           }
         }
       }
