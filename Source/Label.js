@@ -45,16 +45,24 @@ LSD.Native.Label = new Class({
     events: {
       _label: {
         element: {
-          'click': 'focusControl'
+          'click': 'click'
         }
       }
     }
   },
   
-  focusControl: function(event) {
+  click: function(event){
+    if (event && event.preventDefault) event.preventDefault();
+    if (!this.disabled) {
+      this.focusControl();
+      if(this.control.click) this.control.click();
+      return this.parent.apply(this, arguments);
+    }
+  },
+  
+  focusControl: function() {
     if (this.control && this.control.focus) {
       this.control.focus();
-      if (event) event.preventDefault();
     }
   }
 });
