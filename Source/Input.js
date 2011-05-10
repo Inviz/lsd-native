@@ -39,7 +39,7 @@ LSD.Native.Input = new Class({
   },
   
   getRawValue: function() {
-    return this.attributes.value && this.element.get('value');
+    return this.element.get('value');
   },
   
   focus: function() {
