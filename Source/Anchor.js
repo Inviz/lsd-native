@@ -14,6 +14,7 @@ requires:
   - LSD/LSD.Module.Accessories
   - LSD/LSD.Module.Layout
   - LSD/LSD.Mixin.Dialog
+  - LSD/LSD.Mixin.Request
 
 provides: 
   - LSD.Native.Anchor
