@@ -36,8 +36,7 @@ LSD.Native.Anchor = new Class({
       type: 'form'
     },
     layout: {
-      render: false,
-      extract: true
+      render: false
     }
   },
 
