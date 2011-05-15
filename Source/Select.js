@@ -22,7 +22,8 @@ LSD.Native.Select = new Class({
   Extends: LSD.Native.Input,
   
   options: {
-    tag: 'select'
+    tag: 'select',
+    inline: null
   }
   
 });

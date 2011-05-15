@@ -11,7 +11,7 @@ authors: Yaroslaff Fedin
  
 requires:
   - LSD.Native.Input
-  - LSD.Native.Button
+  - Widgets/LSD.Widget.Button
 
 provides: 
   - LSD.Native.Input.Submit
@@ -21,7 +21,7 @@ provides:
 
 LSD.Native.Input.Submit = new Class({
 
-  Extends: LSD.Native.Button,
+  Extends: LSD.Widget.Button,
   
   options: {
     events: {

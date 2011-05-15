@@ -6,9 +6,6 @@ license: Public domain, http://unlicense.org
 copyright: Yaroslaff Fedin
 author: inviz
 sources:
-  - Source/Button.js
-  - Source/Form.js
-  - Source/Fieldset.js
   - Source/Input.js
   - Source/Input/Date.js
   - Source/Input/File.js
@@ -22,11 +19,4 @@ sources:
   - Source/Input/Search.js
   - Source/Select.js
   - Source/Textarea.js
-  - Source/Body.js
-  - Source/Anchor.js
-  - Source/Body/Page.js
-  - Source/Body/Dialog.js
   - Source/Command.js
-  - Source/Label.js
-  - Source/Table.js
-  - Source/Table/Calendar.js

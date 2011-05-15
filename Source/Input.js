@@ -19,8 +19,6 @@ provides:
 */
 
 LSD.Native.Input = new Class({
-  Extends: LSD.Native,
-  
   options: {
     tag: 'input',
     events: {
@@ -30,6 +28,7 @@ LSD.Native.Input = new Class({
         }
       }
     },
+    inline: null,
     focusable: false,
     writable: true
   },

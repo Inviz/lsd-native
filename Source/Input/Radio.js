@@ -25,6 +25,7 @@ LSD.Native.Input.Radio = new Class({
     command: {
       type: 'radio'
     },
+    states: Array.fast('checked'),
     events: {
       _checkbox: {
         self: {
@@ -46,5 +47,3 @@ LSD.Native.Input.Radio = new Class({
     }
   }
 });
-
-LSD.Native.Input.Radio.prototype.addState('checked');
