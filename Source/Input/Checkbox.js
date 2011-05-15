@@ -25,6 +25,7 @@ LSD.Native.Input.Checkbox = new Class({
     command: {
       type: 'checkbox'
     },
+    states: Array.fast('checked'),
     events: {
       _checkbox: {
         element: {
@@ -51,5 +52,3 @@ LSD.Native.Input.Checkbox = new Class({
     }
   }
 });
-
-LSD.Native.Input.Checkbox.prototype.addState('checked');
