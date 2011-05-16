@@ -11,7 +11,8 @@ authors: Yaroslaff Fedin
  
 requires:
  - LSD/LSD.Native
-
+ - Ext/Element.Events.input
+ 
 provides: 
   - LSD.Native.Input
  
@@ -24,7 +25,7 @@ LSD.Native.Input = new Class({
     events: {
       _input: {
         element: {
-          change: 'setValue'
+          input: 'setValue'
         }
       }
     },
