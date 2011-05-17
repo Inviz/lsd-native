@@ -12,7 +12,6 @@ sources:
   - Source/Input/Submit.js
   - Source/Input/Text.js
   - Source/Input/Hidden.js
-  - Source/Input/Hidden.js
   - Source/Input/Password.js
   - Source/Input/Checkbox.js
   - Source/Input/Radio.js
