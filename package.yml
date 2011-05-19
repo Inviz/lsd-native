@@ -9,7 +9,6 @@ sources:
   - Source/Input.js
   - Source/Input/Date.js
   - Source/Input/File.js
-  - Source/Input/Submit.js
   - Source/Input/Text.js
   - Source/Input/Hidden.js
   - Source/Input/Password.js
