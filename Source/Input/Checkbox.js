@@ -41,11 +41,9 @@ LSD.Native.Input.Checkbox = new Class({
           },
           'check': function() {
             this.element.checked = true;
-            this.getCommand().check();
           },
           'uncheck': function() {
             this.element.checked = false;
-            this.getCommand().uncheck();
           }
         }
       }
