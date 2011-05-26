@@ -32,8 +32,6 @@ LSD.Native.Input.Radio = new Class({
           'click': 'check',
           'attach': function() {
             this.element.addListener('click', this.click.bind(this));
-          },
-          'setDocument': function(){
             if (this.attributes.checked) this.click();
           },
           'check': function() {
