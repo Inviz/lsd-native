@@ -9,7 +9,6 @@ sources:
   - Source/Input.js
   - Source/Input/Date.js
   - Source/Input/File.js
-  - Source/Input/Text.js
   - Source/Input/Hidden.js
   - Source/Input/Password.js
   - Source/Input/Checkbox.js
@@ -17,4 +16,3 @@ sources:
   - Source/Input/Search.js
   - Source/Select.js
   - Source/Textarea.js
-  - Source/Command.js
