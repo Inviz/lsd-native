@@ -22,18 +22,8 @@ LSD.Native.Input.Password = new Class({
   Extends: LSD.Native.Input,
   
   options: {
-    events: {
-      _password: {
-        self: {
-          placehold: function(){
-            this.element.set('type', 'text');
-          },
-          unplacehold: function(){
-            this.element.set('type', 'password');
-          }
-        } 
-      }
+    attributes: {
+      type: 'password'
     }
   }
-  
 });
