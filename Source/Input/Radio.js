@@ -22,20 +22,20 @@ LSD.Native.Input.Radio = new Class({
   Extends: LSD.Native.Input,
 
   options: {
-    pseudos: Array.fast('radio'),
+    pseudos: Array.fast('radio', 'clickable'),
     events: {
       _checkbox: {
         self: {
-          'click': 'check',
-          'attach': function() {
-            this.element.addListener('click', this.click.bind(this));
+          attach: function() {
             if (this.attributes.checked) this.click();
           },
-          'check': function() {
+          check: function() {
             this.element.checked = true;
+            this.getCommand().check();
           },
-          'uncheck': function() {
+          uncheck: function() {
             this.element.checked = false;
+            this.getCommand().uncheck();
           }
         }
       }
