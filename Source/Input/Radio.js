@@ -26,16 +26,17 @@ LSD.Native.Input.Radio = new Class({
     events: {
       _checkbox: {
         self: {
-          attach: function() {
+          setDocument: function() {
             if (this.attributes.checked) this.click();
           },
           check: function() {
-            this.element.checked = true;
-            this.getCommand().check();
+            !function() {
+              this.element.checked = true;
+            }.delay(0, this);
+            this.setAttribute('checked', true);
           },
           uncheck: function() {
-            this.element.checked = false;
-            this.getCommand().uncheck();
+            this.setAttribute('checked', false);
           }
         }
       }
