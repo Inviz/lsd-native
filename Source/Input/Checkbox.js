@@ -3,7 +3,7 @@
  
 script: Checkbox.js
  
-description: Simple text input
+description: On/Off widget
  
 license: Public domain (http://unlicense.org).
 
@@ -31,11 +31,9 @@ LSD.Native.Input.Checkbox = new Class({
           },
           check: function() {
             this.element.checked = true;
-            this.getCommand().check();
           },
           uncheck: function() {
             this.element.checked = false;
-            this.getCommand().uncheck();
           }
         }
       }

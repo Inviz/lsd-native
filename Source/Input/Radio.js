@@ -3,7 +3,7 @@
  
 script: Radio.js
  
-description: Simple text input
+description: One-from-a-list kind of a widget
  
 license: Public domain (http://unlicense.org).
 
@@ -30,13 +30,10 @@ LSD.Native.Input.Radio = new Class({
             if (this.attributes.checked) this.click();
           },
           check: function() {
-            !function() {
-              this.element.checked = true;
-            }.delay(0, this);
-            this.setAttribute('checked', true);
+            this.element.checked = true;
           },
           uncheck: function() {
-            this.setAttribute('checked', false);
+            this.element.checked = false;
           }
         }
       }
