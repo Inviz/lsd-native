@@ -22,7 +22,7 @@ LSD.Native.Input.Checkbox = new Class({
   Extends: LSD.Native.Input,
   
   options: {
-    pseudos: Array.fast('checkbox', 'clickable'),
+    pseudos: Array.object('checkbox', 'clickable'),
     events: {
       _checkbox: {
         self: {

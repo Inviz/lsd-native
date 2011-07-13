@@ -30,7 +30,7 @@ LSD.Native.Input = new Class({
       }
     },
     inline: null,
-    pseudos: Array.fast('form-associated', 'value')
+    pseudos: Array.object('form-associated', 'value')
   },
   
   applyValue: function(value) {
