@@ -25,12 +25,15 @@ LSD.Native.Input = new Class({
     events: {
       _input: {
         element: {
-          input: 'setValue'
+          input: 'setValue',
+          change: 'setValue',
+          focus: 'onFocus',
+          blur: 'onBlur'
         }
       }
     },
     inline: null,
-    pseudos: Array.object('form-associated', 'value')
+    pseudos: Array.object('form-associated', 'focusable', 'value')
   },
   
   applyValue: function(value) {
@@ -39,10 +42,6 @@ LSD.Native.Input = new Class({
   
   getRawValue: function() {
     return this.element.get('value');
-  },
-  
-  focus: function() {
-    this.element.focus();
   }
   
 });
