@@ -29,9 +29,6 @@ LSD.Native.Input.Checkbox = new Class({
     events: {
       _checkbox: {
         self: {
-          setDocument: function() {
-            if (this.attributes.checked) this.click();
-          },
           check: function() {
             this.element.checked = true;
           },
